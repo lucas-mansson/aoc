@@ -24,14 +24,11 @@ def is_invalid(id: str):
             return True
     return False
 
-# Check if the input has any repeating blocks of size
 def is_repeating(input: str, size: int) -> bool:
     chunks = [input[i:i+size] for i in range(0, len(input), size)] 
-
     for i in range(1, len(chunks)):
         if chunks[0] != chunks[i]:
             return False
-
     return True 
 
 def part2():
@@ -46,9 +43,9 @@ def part2():
                 invalid_ids.append(i)
 
     res = 0
-    for id in set(invalid_ids):
+    for id in invalid_ids:
         res += int(id)
-    print(invalid_ids)
+
     print(res)
     return
 
