@@ -34,7 +34,7 @@ def is_repeating(input: str, size: int) -> bool:
 def part2():
     with open("input.txt", "r") as f:
         ranges = f.read().split(",")
-    
+   
     invalid_ids = []
     for r in ranges:
         r = r.split("-") 
