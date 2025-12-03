@@ -1,3 +1,19 @@
+def part1():
+    rows = open("input.txt", "r").readlines()
+    
+    joltages = []
+    
+    for row in rows:
+        nums = list(row)
+        first = max(nums[0:-2])
+        nums = nums[nums.index(first): -1]
+        second = max(nums)
+        num_str = str(first) + str(second)
+        joltages.append(int(num_str))
+    
+    print(sum(joltages))
+
+
 def part2():
     rows = open("input.txt", "r").readlines()
     
@@ -14,9 +30,6 @@ def part2():
     
     print(sum(joltages))
 
-def part1():
-
-    return
 
 if __name__ == "__main__":
     part1()
